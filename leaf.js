@@ -4,10 +4,6 @@ function leafClick() {
   $('.download').show();
 };
 
-function leafUnclip() {
-
-};
-
 $(document).ready(function(){
 
   $('.leaf-click').click(leafClick);
