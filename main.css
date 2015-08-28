@@ -333,16 +333,13 @@ content{
 	right: 26.4em;
 	transform: rotate(50deg);
 	animation: leaf-click .5s linear;
-	-webkit-animation: leaf-click .5s linear;
+	-webkit-animation: leaf-click .3s linear;
 }
 .leaf{
 	height: 8em;
 	width: 8em;
 	position: absolute;
 	z-index: 17;
-/*	bottom: 28em;
-	right: 26.4em;*/
-	/*transform: rotate(50deg);*/
 	-webkit-clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
 	clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
 	animation: leaf-color 30s linear infinite;
@@ -376,7 +373,7 @@ content{
 	width: 3em;
 	position: absolute;
 	z-index: 16;
-	bottom: 35em;
+	bottom: 34.75em;
 	right: 26em;
 	-webkit-clip-path: polygon(55% 22%, 54% 56%, 46% 80%, 39% 100%, 30% 100%, 44% 58%, 45% 29%);
 	clip-path: polygon(55% 22%, 54% 56%, 46% 80%, 39% 100%, 30% 100%, 44% 58%, 45% 29%);
@@ -389,30 +386,21 @@ content{
 	75% {background: #134E00}
 	100% {background: #227600}
 }
-/*.leaf-select {
-	height: 8em;
-	width: 8em;
-	position: absolute;
-	z-index: 17;
-	bottom: 28em;
-	right: 26.4em;
-	transform: rotate(50deg);
-	-webkit-clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
-	clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
-	animation: leaf-color 30s linear infinite, leaf-click .5s linear;
-	-webkit-animation: leaf-color 30s linear infinite, leaf-click .5s linear;
-	-webkit-backface-visibility: hidden;
-	cursor: pointer;
-	cursor: hand;
-}*/
 @keyframes leaf-click {
+	0% {bottom: 27.95em; right: 26.3em;}
+	25% {bottom: 28.05em; right: 26.5em;}
+	50% {bottom: 27.95em; right: 26.3em;}
+	75% {bottom: 28.05em; right: 26.5em;}
+	100%{bottom: 28em; right: 26.4em;}
+}
+/*@keyframes leaf-click {
 	0% {transform: rotate(55deg);}
 	20% {transform: rotate(45deg);}
 	40% {transform: rotate(56deg);}
 	60% {transform: rotate(47deg);}
 	80% {rtransform: rotate(53deg);}
 	100% {transform: rotate(50deg);}
-}
+}*/
 #fire-text{
 	position: relative;
 	left: 46%;
