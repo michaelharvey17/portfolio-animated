@@ -1,4 +1,5 @@
 function buildingClick() {
+  console.log("inside buildingClick");
   $('#trunk1').animate({
       left: "-=30em"
     }, 5000, function(){
@@ -11,7 +12,7 @@ function buildingClick() {
     right: "-=40em"
   }, 5000, function(){
   });
-  $('.leaf').animate({
+  $('.leaf-wrap').animate({
     right: "-=40em"
     }, 5000, function(){
   });
@@ -33,7 +34,7 @@ function buildingClick() {
   });
   $('#fire').animate({
     left: "-=20em",
-    top: "+=10em",
+    top: "+=20em",
     }, 5000, function(){
   });
   $('#fire1, #fire2, #fire3, #fire4, #fire5, #fire6').animate({
@@ -98,6 +99,9 @@ function buildingClick() {
     marginTop: "+=2%",
     }, 5000, function(){
   });
+  $('.window').hide("slow");
+  $('.project').show("slow");
+  $('#building-back').delay(5500).show("slow");
   $('#building-text').animate({
     fontSize: "+=2em",
     top: "-=30%",
@@ -106,9 +110,7 @@ function buildingClick() {
   });
   $('#sun, #moon, .star').hide();
   $('.building-click').off('click');
-  $('#projects').css({visibility: 'visible'}).animate({opacity: 1}, 5000);
-  $('.building-click').removeClass('building-click').addClass('building-unclick');
-  $('.building-unclick, #building-back').click(buildingUnclick);
+  $('#building-back, #building-text').click(buildingUnclick);
 };
 
 function buildingUnclick() {
@@ -124,7 +126,7 @@ function buildingUnclick() {
     right: "+=40em"
   }, 5000, function(){
   });
-  $('.leaf').animate({
+  $('.leaf-wrap').animate({
     right: "+=40em"
     }, 5000, function(){
   });
@@ -146,7 +148,7 @@ function buildingUnclick() {
   });
   $('#fire').animate({
     left: "+=20em",
-    top: "-=10em",
+    top: "-=20em",
     }, 5000, function(){
   });
   $('#fire1, #fire2, #fire3, #fire4, #fire5, #fire6').animate({
@@ -211,6 +213,9 @@ function buildingUnclick() {
     borderWidth: "-=6px",
     }, 5000, function(){
   });
+  $('.window').show("slow");
+  $('.project').hide("slow");
+  $('#building-back').hide("slow");
   $('#building-text').animate({
     fontSize: "-=2em",
     top: "+=30%",
@@ -218,14 +223,14 @@ function buildingUnclick() {
     }, 5000, function(){
   });
   $('#sun, #moon, .star').show();
-  $('.building-unclick').off('click');
-  $('#projects').css({visibility: 'hidden'}).animate({opacity: 0}, 5000);
-  $('.building-unclick').removeClass('building-unclick').addClass('building-click');
+  $('#building-back, #building-text').off('click');
   $('.building-click').click(buildingClick);
 };
 
 $(document).ready(function(){
 
   $('.building-click').click(buildingClick);
+  $('.project').hide();
+  $('#building-back').hide();
 
 });

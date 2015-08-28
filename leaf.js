@@ -1,5 +1,5 @@
 function leafClick() {
-  $(".leaf").removeClass("leaf").addClass('leaf-select');
+  $(".leaf-wrap").removeClass("leaf-wrap").addClass('leaf-select');
   $('.leaf-text').hide();
   $('.download').show();
 };

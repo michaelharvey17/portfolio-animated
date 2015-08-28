@@ -11,7 +11,7 @@ function fireClick() {
       right: "-=40em"
     }, 5000, function(){
     });
-    $('.leaf').animate({
+    $('.leaf-wrap').animate({
       right: "-=40em"
     }, 5000, function(){
     });
@@ -56,6 +56,7 @@ function fireClick() {
     }, 5000, function(){
     });
     $('#sun, #moon, .star').hide();
+    $('#fire-back').show("slow");
     $('.fire-click').off('click');
     $('#social').css({visibility: 'visible'}).animate({opacity: 1}, 5000);
     $('.fire-click').removeClass('fire-click').addClass('fire-unclick');
@@ -74,7 +75,7 @@ function fireUnclick() {
       right: "+=40em"
     }, 5000, function(){
     });
-  $('.leaf').animate({
+  $('.leaf-wrap').animate({
       right: "+=40em"
     }, 5000, function(){
     });
@@ -120,7 +121,8 @@ function fireUnclick() {
     });
   $('#sun, #moon, .star').show();
   $('#social').css('visibility', 'hidden');
-  $('.fire-unclick').off('click');
+  $('#fire-back').hide("slow");
+  $('.fire-unclick, #fire-back').off('click');
   $('.fire-unclick').removeClass('fire-unclick').addClass('fire-click');
   $('.fire-click').click(fireClick);
 };
@@ -131,6 +133,8 @@ $(document).ready(function(){
 
   //animation for click on social media
   $('.fire-click').click(fireClick);
+
+  $('#fire-back').hide();
 });
 
 

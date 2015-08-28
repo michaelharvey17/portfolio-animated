@@ -317,14 +317,32 @@ content{
 	75% {background: #352408;}
 	100% {background: #4F3710;}
 }
+.leaf-wrap{
+	height: 8em;
+	width: 8em;
+	position: absolute;
+	bottom: 28em;
+	right: 26.4em;
+	transform: rotate(50deg);
+}
+.leaf-select {
+	height: 8em;
+	width: 8em;
+	position: absolute;
+	bottom: 28em;
+	right: 26.4em;
+	transform: rotate(50deg);
+	animation: leaf-click .5s linear;
+	-webkit-animation: leaf-click .5s linear;
+}
 .leaf{
 	height: 8em;
 	width: 8em;
 	position: absolute;
 	z-index: 17;
-	bottom: 28em;
-	right: 26.4em;
-	transform: rotate(50deg);
+/*	bottom: 28em;
+	right: 26.4em;*/
+	/*transform: rotate(50deg);*/
 	-webkit-clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
 	clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
 	animation: leaf-color 30s linear infinite;
@@ -371,7 +389,7 @@ content{
 	75% {background: #134E00}
 	100% {background: #227600}
 }
-.leaf-select {
+/*.leaf-select {
 	height: 8em;
 	width: 8em;
 	position: absolute;
@@ -383,11 +401,10 @@ content{
 	clip-path: polygon(46% 0, 71% 9%, 81% 27%, 80% 54%, 70% 74%, 50% 100%, 26% 79%, 11% 58%, 9% 34%, 22% 10%);
 	animation: leaf-color 30s linear infinite, leaf-click .5s linear;
 	-webkit-animation: leaf-color 30s linear infinite, leaf-click .5s linear;
-	background-color: #227600;
 	-webkit-backface-visibility: hidden;
 	cursor: pointer;
 	cursor: hand;
-}
+}*/
 @keyframes leaf-click {
 	0% {transform: rotate(55deg);}
 	20% {transform: rotate(45deg);}
@@ -408,6 +425,17 @@ content{
 	cursor: pointer;
 	cursor: hand;
 	font-family: sans-serif;
+}
+#fire-back{
+	position: absolute;
+	left: 24.25em;
+	top: 20em;
+	z-index: 51;
+	cursor: pointer;
+	cursor: hand;
+	font-size: 1.5em;
+	color: yellow;
+	text-shadow: 0 0 3px orange;
 }
 #fire{
 	position: relative;
@@ -495,7 +523,7 @@ content{
 	height: .75em;
 	position: absolute;
 	left: .5em;
-	top: 60%;
+	top: 60.3%;
 	z-index: 18;
 	border-radius: 2px;
 	animation: tree 30s linear infinite;
@@ -570,6 +598,7 @@ content{
 	text-align: center;
 	cursor: pointer;
 	cursor: hand;
+	text-align: center;
 }
 #antenna {
 	z-index: -61;
@@ -604,6 +633,32 @@ content{
 	top: 43.4%;
 	right: 28%;
 	border-bottom: solid grey;
+}
+.project li{
+	list-style: none;
+	font-size: 1.5em;
+	color: #FFFC4D;
+	text-shadow: 0 0 0 10px #FFFC4D;
+	margin-bottom: 1em;
+}
+.project a{
+	font-size: 2em;
+	text-decoration: none;
+	color: #FFFC4D;
+	text-shadow: 0 0 10px #FFFC4D;
+	font-family: 'Inconsolata', sans-serif;
+}
+#building-back {
+	position: absolute;
+	top: 20em;
+	right: 19em;
+	color: #FFFC4D;
+	font-size: 1.75em;
+	display: block;
+	text-shadow: 0 0 10px #FFFC4D;
+	font-family: 'Inconsolata', sans-serif;
+	cursor: pointer;
+	cursor: hand;
 }
 .window {
 	width: 10%;
