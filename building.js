@@ -163,9 +163,9 @@ function buildingUnclick() {
       top: "-=40%"
     }, 5000, function(){
     });
-  $('#fire-text').animate({
+  $('#fire-text').delay(5000).animate({
     opacity: "1",
-    }, 5000, function(){
+    }, 1000, function(){
   });
   $('#board').animate({
     left: "+=30em",
