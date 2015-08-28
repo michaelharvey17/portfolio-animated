@@ -41,7 +41,7 @@ content{
 	position: absolute;
 	border-radius: 50%;
 	left: -5%;
-	top: 35%;
+	top: 30%;
 	animation: DAY-NIGHT 30s linear infinite;
 	animation-delay: 15s;
 	visibility: hidden;
