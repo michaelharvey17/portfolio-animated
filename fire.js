@@ -55,7 +55,7 @@ function fireClick() {
       fontSize: "3em",
     }, 4000, function(){
     });
-    $('#sun, #moon, .star').hide();
+    $('sun, moon, .star').hide();
     $('#fire-back').delay(5000).show("slow");
     $('.fire-click').off('click');
     $('#social').css({visibility: 'visible'}).delay(4000).animate({opacity: 1}, 2000);
@@ -119,7 +119,7 @@ function fireUnclick() {
       fontSize: "1.25em",
     }, 5000, function(){
     });
-  $('#sun, #moon, .star').show();
+  $('sun, moon, .star').show();
   $('#social').css('visibility', 'hidden');
   $('#fire-back').hide("slow");
   $('.fire-unclick, #fire-back').off('click');

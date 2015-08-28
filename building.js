@@ -108,7 +108,7 @@ function buildingClick() {
     right: "+=7.5%",
     }, 5000, function(){
   });
-  $('#sun, #moon, .star').hide();
+  $('sun, moon, .star').hide();
   $('.building-click').off('click');
   $('#building-back, #building-text').click(buildingUnclick);
 };
@@ -222,7 +222,7 @@ function buildingUnclick() {
     right: "-=7.5%",
     }, 5000, function(){
   });
-  $('#sun, #moon, .star').show();
+  $('sun, moon, .star').show();
   $('#building-back, #building-text').off('click');
   $('.building-click').click(buildingClick);
 };
