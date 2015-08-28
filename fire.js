@@ -49,16 +49,16 @@ function fireClick() {
       top: "+=40%"
     }, 5000, function(){
     });
-    $('#fire-text').stop().animate({
+    $('#fire-text').animate({
       left: "+=2%",
       top: "-=20.5em",
       fontSize: "3em",
-    }, 5000, function(){
+    }, 4000, function(){
     });
     $('#sun, #moon, .star').hide();
-    $('#fire-back').show("slow");
+    $('#fire-back').delay(5000).show("slow");
     $('.fire-click').off('click');
-    $('#social').css({visibility: 'visible'}).animate({opacity: 1}, 5000);
+    $('#social').css({visibility: 'visible'}).delay(4000).animate({opacity: 1}, 2000);
     $('.fire-click').removeClass('fire-click').addClass('fire-unclick');
     $('.fire-unclick, #fire-back').click(fireUnclick);
   };
